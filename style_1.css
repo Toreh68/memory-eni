@@ -1,0 +1,36 @@
+.form{
+    padding: 10px 10px 10px 10px;
+}
+
+
+#imgMemory {
+    width: 400px;
+    height: 300px;
+}
+
+#presentation{
+    font-size: 2rem;
+    border-radius: 5%;
+}
+
+#inscription{
+    font-size: 2rem;
+    border-radius: 5%;
+    height: 65vh;
+    width: 50vw;
+}
+
+legend{
+    font-size: 2rem;
+}
+
+
+#title{
+    display: flex;
+    justify-content: center;
+}
+
+fieldset{
+    min-width: 12px;
+    padding: 113px;
+}
