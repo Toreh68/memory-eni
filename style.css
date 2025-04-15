@@ -1,0 +1,58 @@
+.form{
+    padding: 5px 5px 5px 5px;
+    
+}
+
+
+#imgMemory {
+    width: 400px;
+    height: 300px;
+}
+
+#presentation{
+    font-size: 2rem;
+    border-radius: 5%;
+}
+
+#inscription{
+    font-size: 2rem;
+    border-radius: 5%;
+    height: 70vh;
+    width: 50vw;
+}
+
+#connexion{
+    border-radius: 5%;
+    font-size: 2rem;
+}
+
+legend{
+    font-size: 2rem;
+}
+
+
+#title{
+    display: flex;
+    justify-content: center;
+}
+
+fieldset{
+    width: 50vw;
+    padding: 30px;
+}
+
+.infos{
+    font-size: 1rem;
+}
+
+#emailValid{
+    font-size: 1rem;
+}
+
+#nomValid{
+    font-size: 1rem;
+}
+
+#confirmMdpSentence{
+    font-size: 1rem;
+}
