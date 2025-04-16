@@ -1,58 +1,178 @@
-.form{
-    padding: 5px 5px 5px 5px;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+#presentation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color:black;
+    color: white;
+}
+
+.regleJeu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.regleJeu li {
+    margin-bottom: 0.5rem;
+}
+
+#imgMemory {
+    max-width: 85%;
+    height: 250px;
+    margin-top: 1rem;
+}
+
+#inscription {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #343a40;
+    color: white;
     
 }
 
-
-#imgMemory {
-    width: 400px;
-    height: 300px;
+.form {
+    margin-bottom: 1rem;
 }
 
-#presentation{
-    font-size: 2rem;
-    border-radius: 5%;
-}
-
-#inscription{
-    font-size: 2rem;
-    border-radius: 5%;
-    height: 70vh;
-    width: 50vw;
-}
-
-#connexion{
-    border-radius: 5%;
-    font-size: 2rem;
-}
-
-legend{
-    font-size: 2rem;
+.infos {
+    margin-top: 2rem;
 }
 
 
-#title{
+
+.infos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.infos li {
+    margin-bottom: 0.5rem;
+}
+
+#connexion {
+    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color:black;
+    color: white;
 }
 
-fieldset{
-    width: 50vw;
-    padding: 30px;
+#niveauSecurite{
+    font-size: 0.8rem;
 }
 
-.infos{
-    font-size: 1rem;
+#nomInput{
+    display: flex;
+    flex-direction: row;
 }
 
-#emailValid{
-    font-size: 1rem;
+#imgCheck{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
 }
 
-#nomValid{
-    font-size: 1rem;
+#imgError{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
 }
 
-#confirmMdpSentence{
-    font-size: 1rem;
+#imgCheckEmail{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
+}
+
+#imgErrorEmail{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
+}
+
+#inputEmail{
+    display: flex;
+    flex-direction: row;
+}
+
+#imgCheckMdp{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
+
+}
+
+#imgErrorMdp{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
+
+}
+
+#inputMdp{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#securite{
+    padding-top: 20px;
+    font-size: 1.55rem
+    }
+
+#faible{
+    border-top: 10px solid red;
+    margin-right: 10px;
+    display: none;
+}
+
+#moyen{
+    border-top: 10px solid orange;
+    margin-right: 10px;
+    display: none;
+}
+
+#fort{
+    border-top: 10px solid green;
+    display: none;
+}
+
+#inputConfirmMdp{
+    display: flex;
+    flex-direction: row;
+}
+
+#imgCheckConfirmMdp{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
+}
+
+#imgErrorConfirmMdp{
+    height: 30px;
+    padding-left: 8px;
+    display: none;
 }
