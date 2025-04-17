@@ -8,6 +8,9 @@ function colorTextGreen(id) {
 function colorTextRed(id) {
     document.getElementById(id).style.color = "red"
 }
+
+
+
 document.getElementById('mdp').addEventListener('input', checkConditionsMdp)
   function checkConditionsMdp(){
   let mdp = document.getElementById('mdp').value
@@ -39,6 +42,8 @@ if (mdp === '') {
 }
   }
 
+  
+  
   document.getElementById('mdp').addEventListener('input', checkPwdLength)
 function checkPwdLength() {
     
@@ -56,6 +61,8 @@ function checkPwdLength() {
     
 }
 
+
+
 document.getElementById('mdp').addEventListener('input', checkNb)
 function checkNb(){
     let mdp = document.getElementById('mdp').value;
@@ -70,6 +77,8 @@ function checkNb(){
     }
 
 }
+
+
 
 document.getElementById('mdp').addEventListener('input', checkSpecial)
 function checkSpecial(){
@@ -89,6 +98,8 @@ function checkSpecial(){
 
     
 }
+
+
 
 
 document.getElementById('email').addEventListener('input', checkEmail)
@@ -113,7 +124,10 @@ function checkEmail(){
        }
     }}
 
-document.getElementById('nom').addEventListener('input', checkNom)
+
+
+
+    document.getElementById('nom').addEventListener('input', checkNom)
 function checkNom() {
     let nom = document.getElementById('nom').value;
     let isOk = nom.length >= 3;
@@ -133,6 +147,9 @@ function checkNom() {
             document.getElementById('imgError').style.display = 'block';
         }
 }}
+
+
+
 
 
 document.getElementById('mdp').addEventListener('input', checkConfirmMdp)
@@ -157,6 +174,10 @@ let mdp = document.getElementById('mdp').value;
 }}
 
 
+
+
+
+
 document.getElementById('mdp').addEventListener('input', checkSecurity)
 function checkSecurity(){
     let mdp = document.getElementById('mdp').value;
@@ -165,17 +186,104 @@ let moyen=mdp.length>=6 && mdp.length<9
 let fort=mdp.length>9
 
 if(mdp===''){
+    document.getElementById('blockFaible').style.display='none'
+    document.getElementById('blockMoyen').style.display='none'
+    document.getElementById('blockFort').style.display='none'
+
+}else if(faible){
+    document.getElementById('blockFaible').style.display='block'
+}else if(moyen){
+    document.getElementById('blockMoyen').style.display='block'
+}else if(fort){
+    document.getElementById('blockFort').style.display='block'
+
+}
+
+}
+
+
+
+
+
+document.getElementById('btnAnnul').addEventListener('click', reset)
+function reset(){
+    document.getElementById('imgCheck').style.display='none'
+    document.getElementById('imgError').style.display='none'
+    document.getElementById('imgCheckEmail').style.display='none'
+    document.getElementById('imgErrorEmail').style.display='none'
+    document.getElementById('imgCheckMdp').style.display='none'
+    document.getElementById('imgErrorMdp').style.display='none'
+    document.getElementById('imgCheckConfirmMdp').style.display='none'
+    document.getElementById('imgErrorConfirmMdp').style.display='none'
     document.getElementById('faible').style.display='none'
     document.getElementById('moyen').style.display='none'
     document.getElementById('fort').style.display='none'
-
-}else if(faible){
-    document.getElementById('faible').style.display='block'
-}else if(moyen){
-    document.getElementById('moyen').style.display='block'
-}else if(fort){
-    document.getElementById('fort').style.display='block'
-
+    document.getElementById('symbole').style.color='white'
+    document.getElementById('chiffre').style.color='white'
+    document.getElementById('nbCaracteres').style.color='white'
+   
 }
 
+
+
+
+
+
+
+
+document.getElementById('btnValid').addEventListener('click', formulaire)
+function formulaire(event) {
+    
+    
+    event.preventDefault()
+
+    let nom = document.getElementById('nom').value
+    let email = document.getElementById('email').value
+    let mdp = document.getElementById('mdp').value;
+    let confirmMdp = document.getElementById('confirmMdp').value;
+
+    let isOk = checkNom(nom) && checkEmail(email) && checkConditionsMdp(mdp) && checkConfirmMdp(mdp, confirmMdp);
+
+    if (isOk) {
+        window.location.href = 'se_connecter.html';
+       
+    }
+    
+     else {
+        alert("Merci de corriger les erreurs dans le formulaire.");
 }
+}
+ 
+
+
+document.getElementById('btnValid').addEventListener('click', saveData)
+function saveData(){
+   
+        let name = document.getElementById('nom').value;
+        let email = document.getElementById('email').value;
+        let pwd = document.getElementById('mdp').value;
+     
+            const data = JSON.parse(localStorage.getItem("data")) || [];
+     
+            data.push({
+              userName : name,
+              mail : email,
+              motDePasse : pwd,
+            })
+            localStorage.setItem('data', JSON.stringify(data));
+        }
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+

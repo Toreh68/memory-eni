@@ -138,26 +138,29 @@ header {
     
 }
 
-#securite{
+#blockSecurite{
+    width: 100%;
     padding-top: 20px;
-    font-size: 1.55rem
+    font-size: 1.55rem;
+    justify-content: space-between;
     }
 
-#faible{
-    border-top: 10px solid red;
-    margin-right: 10px;
+#blockFaible{
+    justify-content: left;
     display: none;
+    width: 33%;
 }
 
-#moyen{
-    border-top: 10px solid orange;
-    margin-right: 10px;
+#blockMoyen{
+    justify-content: center;
     display: none;
+    width: 33%;
 }
 
-#fort{
-    border-top: 10px solid green;
+#blockFort{
+    justify-content: right;
     display: none;
+    width: 33%;
 }
 
 #inputConfirmMdp{
@@ -175,4 +178,38 @@ header {
     height: 30px;
     padding-left: 8px;
     display: none;
+}
+
+#barreFaible{
+    background-color: red;
+    width: 100%;
+    height: 2px;
+}
+
+#barreMoyen{
+    background-color: orange;
+    width: 100%;
+    height: 2px;
+}
+
+#barreFort{
+    background-color: green;
+    width: 100%;
+    height: 2px;
+}
+
+#faible{
+    font-size: 1rem;
+}
+
+#moyen{
+    font-size: 1rem;
+}
+
+#fort{
+    font-size: 1rem;
+}
+
+#blockButton{
+    padding-top: 20px;
 }

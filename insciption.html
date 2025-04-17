@@ -9,7 +9,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-   
+
 </head>
 
 <body>
@@ -22,12 +22,12 @@
     <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
         <div class="container justify-content-center">
             <a href="#" class="navbar-brand">Menu</a>
-           
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
                 aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-           
+
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -42,69 +42,86 @@
                     <li class="nav-item">
                         <a class="nav-link" href="profil.html">Profil</a>
                     </li>
-               
+
                 </ul>
             </div>
         </div>
     </nav>
 
-    <form action="#" method="post" id="inscription" class="container bg-dark text-light ">
+    <form action="se_connecter.html" method="get" id="inscription" class="container bg-dark text-light ">
         <fieldset>
             <div id="title2" class="text-center">
                 <h2 class="text-light">Inscrivez-vous</h2>
             </div>
             <div class="form">
                 <label for="nom">Entrez votre nom</label>
-               <div id="nomInput">
-                <input class="form-control" type="text" id="nom" placeholder="3 caractères minimum" required>
-                <img id="imgCheck" src="check.svg" alt="" >
-                <img id="imgError" src="error.svg" alt="" >
+                <div id="nomInput">
+                    <input class="form-control" type="text" id="nom" placeholder="3 caractères minimum" required>
+                    <img id="imgCheck" src="check.svg" alt="">
+                    <img id="imgError" src="error.svg" alt="">
                 </div>
-   
-                
-            
+
+
+
             </div>
             <div class="form">
                 <label for="email">Entrez votre email</label>
-               <div id="inputEmail">
-                <input class="form-control" type="email" id="email" placeholder="Entrez votre email"
-                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
-                 required>
-                 <img id="imgCheckEmail" src="check.svg" alt="" >
-                <img id="imgErrorEmail" src="error.svg" alt="" >
+                <div id="inputEmail">
+                    <input class="form-control" type="email" id="email" placeholder="Entrez votre email"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <img id="imgCheckEmail" src="check.svg" alt="">
+                    <img id="imgErrorEmail" src="error.svg" alt="">
                 </div>
             </div>
             <div class="form">
                 <label for="mdp">Mot de passe</label>
                 <div id="inputMdp">
-                <input class="form-control" type="password" id="mdp" placeholder="Tapez votre mot de passe"
-                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$" required>
-                   <img id="imgCheckMdp" src="check.svg" alt="">
-                   <img id="imgErrorMdp" src="error.svg" alt="">
-                  </div> 
-                    <label id="conditionMdp" for="mdp">Au moins <span id="symbole">un symbole</span>, <span id="chiffre">un chiffre</span> ainsi que <span id="nbCaracteres">6 caractères minimum</span></label>
-            <div class="form">
-                <div class="d-flex justify-content-center" id="securite"><span id="faible">Faible</span><span id="moyen">Moyen</span><span id="fort">Fort</span></div>
-                
-                <label for="confirmMdp">Confirmez votre mot de passe</label>
-                <div id="inputConfirmMdp">
-                <input class="form-control" type="password" id="confirmMdp" placeholder="Tapez votre mot de passe"
-                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$" required>
-                    <img id="imgCheckConfirmMdp" src="check.svg" alt="">
-                    <img id="imgErrorConfirmMdp" src="error.svg" alt="">
+                    <input class="form-control" type="password" id="mdp" placeholder="Tapez votre mot de passe"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$" required>
+                    <img id="imgCheckMdp" src="check.svg" alt="">
+                    <img id="imgErrorMdp" src="error.svg" alt="">
                 </div>
-            </div>
-            
-            <div class="d-flex justify-content-center">
-                <button type="submit" id="btnSubmit" class="btn btn-success me-2">Valider</button>
-                <button type="reset" id="btnAnnul" class="btn btn-danger">Annuler</button>
-            </div>
-     </fieldset>
+                <label id="conditionMdp" for="mdp">Au moins <span id="symbole">un symbole</span>, <span id="chiffre">un
+                        chiffre</span> ainsi que <span id="nbCaracteres">6 caractères minimum</span></label>
+                <div class="form">
+                    <div class="d-flex justify-content-space between" id="blockSecurite">
+                        <div id="blockFaible">
+                            <div class="d-flex justify-content-left" id="barreFaible"></div>
+                            <div class="justify-content-left" id="faible">Faible</div>
+                        </div>
+
+                        <div id="blockMoyen">
+                            <div class="d-flex justify-content-center" id="barreMoyen"></div>
+                            <div class="justify-content-left" id="moyen">Moyen</div>
+                        </div>
+
+                        <div id="blockFort">
+                            <div class="d-flex justify-content-right" id="barreFort"></div>
+                            <div class="justify-content-left" id="fort">Fort</div>
+                        </div>
+                    </div>
+                    <div id="inputConfirmMdp"></div>
+                    <label for="confirmMdp">Confirmez votre mot de passe</label>
+                    <div id="inputConfirmMdp">
+                        <input class="form-control" type="password" id="confirmMdp"
+                            placeholder="Tapez votre mot de passe"
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$" required>
+                        <img id="imgCheckConfirmMdp" src="check.svg" alt="">
+                        <img id="imgErrorConfirmMdp" src="error.svg" alt="">
+                    </div>
+
+
+                    <div id="blockButton" class="d-flex justify-content-center">
+                        <button type="submit" id="btnSubmit" class="btn btn-success me-2" >Valider</button>
+                        <button type="reset" id="btnAnnul" class="btn btn-danger">Annuler</button>
+                    </div>
+        </fieldset>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
 </body>
+
 
 </html>
