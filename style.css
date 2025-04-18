@@ -213,3 +213,66 @@ header {
 #blockButton{
     padding-top: 20px;
 }
+
+
+
+
+#profil{
+    padding: 20px;
+}
+
+#titleProfil{
+    font-size: 3rem;
+}
+
+#nomUtilisateur{
+    font-size: 1.5rem;
+}
+
+#emailUtilisateur{
+    font-size: 1.5rem;
+}
+
+#listeJeu {
+    display: flex;
+    flex-direction: column; 
+    align-items: left;   
+    width: 20vw;  
+    font-size: 1.5rem;
+                   
+}
+
+#imgJeu{
+    max-width: 100%;   
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#choixJeu{
+    align-items: left;
+}
+
+#validerProfil{
+    height: 100vh;
+}
+
+#tailleMemory{
+    display: flex;
+    flex-direction: column; 
+    align-items: left;   
+    width: 20vw;  
+    font-size: 1.5rem;
+}
+
+#choixTailleMemory{
+    width: 20vw;
+}
+
+#btnValidProfil{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    
+}
